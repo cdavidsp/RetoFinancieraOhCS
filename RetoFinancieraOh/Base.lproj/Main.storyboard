@@ -25,10 +25,24 @@
                                     <constraint firstAttribute="width" constant="240" id="wVb-GF-yX5"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ingrese el numero de celular" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ec-Dq-VAK">
+                                <rect key="frame" x="85.5" y="163" width="204" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKe-BQ-h6S">
+                                <rect key="frame" x="164" y="209" width="47" height="30"/>
+                                <state key="normal" title="Validar"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="23V-My-DdX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1p8-Hb-dS0"/>
+                            <constraint firstItem="QKe-BQ-h6S" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BoV-uL-Deh"/>
+                            <constraint firstItem="3ec-Dq-VAK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="143" id="Dbv-aY-bRT"/>
+                            <constraint firstItem="QKe-BQ-h6S" firstAttribute="top" secondItem="3ec-Dq-VAK" secondAttribute="bottom" constant="16" id="EsB-xp-Coy"/>
+                            <constraint firstItem="3ec-Dq-VAK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ay9-9w-58B"/>
                             <constraint firstItem="23V-My-DdX" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="yvk-sJ-HKy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
