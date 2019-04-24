@@ -19,8 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C89A3292798E7528F098F01 /* Pods-RetoFinancieraOh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetoFinancieraOh.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RetoFinancieraOh/Pods-RetoFinancieraOh.debug.xcconfig"; sourceTree = "<group>"; };
 		58AE7D51FDDFDBA446166AE3 /* Pods-RetoFinancieraOh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetoFinancieraOh.release.xcconfig"; path = "Target Support Files/Pods-RetoFinancieraOh/Pods-RetoFinancieraOh.release.xcconfig"; sourceTree = "<group>"; };
 		89E10B5E9E075DF0B5E92329 /* Pods_RetoFinancieraOh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetoFinancieraOh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		930EBFED5178D5E01728E493 /* Pods-RetoFinancieraOh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetoFinancieraOh.release.xcconfig"; path = "Pods/Target Support Files/Pods-RetoFinancieraOh/Pods-RetoFinancieraOh.release.xcconfig"; sourceTree = "<group>"; };
 		EC973E6B2270A45F00C4FF49 /* RetoFinancieraOh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetoFinancieraOh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC973E6E2270A45F00C4FF49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC973E702270A45F00C4FF49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,8 @@
 			children = (
 				EE0A8FB6899656C965253C75 /* Pods-RetoFinancieraOh.debug.xcconfig */,
 				58AE7D51FDDFDBA446166AE3 /* Pods-RetoFinancieraOh.release.xcconfig */,
+				2C89A3292798E7528F098F01 /* Pods-RetoFinancieraOh.debug.xcconfig */,
+				930EBFED5178D5E01728E493 /* Pods-RetoFinancieraOh.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
