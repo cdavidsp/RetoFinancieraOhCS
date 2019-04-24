@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
+import GoogleSignIn
 
 
 class ClienteViewController: UIViewController {
@@ -40,7 +41,13 @@ class ClienteViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func log(_ sender: Any) {
+        GIDSignIn.sharedInstance().signOut()
+        
+        self.performSegue(withIdentifier: "showLogin", sender: self)
 
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -109,12 +109,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOz-DF-pUO">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOz-DF-pUO">
                                 <rect key="frame" x="134" y="377" width="107" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Agregar Cliente"/>
                                 <connections>
                                     <action selector="save:" destination="WoC-yU-mmR" eventType="touchUpInside" id="5Lm-46-z5N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWy-hW-io9">
+                                <rect key="frame" x="162" y="434" width="51" height="30"/>
+                                <state key="normal" title="LogOut"/>
+                                <connections>
+                                    <action selector="log:" destination="WoC-yU-mmR" eventType="touchUpInside" id="s1Y-xk-7FW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -126,14 +132,18 @@
                             <constraint firstItem="ez6-Co-Sxr" firstAttribute="leading" secondItem="Agu-R5-s71" secondAttribute="leading" id="H4v-NY-6Sf"/>
                             <constraint firstItem="REa-Gb-fwo" firstAttribute="leading" secondItem="JiM-XB-8bj" secondAttribute="leading" id="Hsj-DW-qYg"/>
                             <constraint firstItem="tuP-T3-YyT" firstAttribute="leading" secondItem="ez6-Co-Sxr" secondAttribute="leading" id="Jde-on-zgQ"/>
+                            <constraint firstItem="FOz-DF-pUO" firstAttribute="centerX" secondItem="JWy-hW-io9" secondAttribute="centerX" id="USx-7U-9En"/>
                             <constraint firstItem="REa-Gb-fwo" firstAttribute="top" secondItem="JiM-XB-8bj" secondAttribute="bottom" constant="32" id="Xjs-sO-dEZ"/>
                             <constraint firstItem="JiM-XB-8bj" firstAttribute="top" secondItem="vtQ-vP-l9v" secondAttribute="top" constant="120" id="Yla-it-XG0"/>
+                            <constraint firstItem="FOz-DF-pUO" firstAttribute="top" secondItem="ez6-Co-Sxr" secondAttribute="bottom" constant="29" id="aFj-qC-cV3"/>
                             <constraint firstItem="REa-Gb-fwo" firstAttribute="top" secondItem="6Dp-DZ-iI6" secondAttribute="bottom" constant="3" id="bwq-D7-BFG"/>
                             <constraint firstItem="JiM-XB-8bj" firstAttribute="top" secondItem="drw-NV-rsd" secondAttribute="bottom" constant="8" id="ckX-3E-kcH"/>
                             <constraint firstItem="Agu-R5-s71" firstAttribute="leading" secondItem="REa-Gb-fwo" secondAttribute="leading" id="crd-yo-C3m"/>
+                            <constraint firstItem="JWy-hW-io9" firstAttribute="top" secondItem="FOz-DF-pUO" secondAttribute="bottom" constant="27" id="doi-KO-TQ2"/>
                             <constraint firstItem="ez6-Co-Sxr" firstAttribute="top" secondItem="tuP-T3-YyT" secondAttribute="bottom" constant="-1" id="faJ-Di-41i"/>
                             <constraint firstItem="drw-NV-rsd" firstAttribute="leading" secondItem="JiM-XB-8bj" secondAttribute="leading" id="j1g-JW-6Of"/>
                             <constraint firstItem="Agu-R5-s71" firstAttribute="top" secondItem="REa-Gb-fwo" secondAttribute="bottom" constant="28" id="jhu-Xq-E4L"/>
+                            <constraint firstItem="JWy-hW-io9" firstAttribute="centerX" secondItem="vtQ-vP-l9v" secondAttribute="centerX" id="uih-14-8Oo"/>
                             <constraint firstItem="6Dp-DZ-iI6" firstAttribute="leading" secondItem="REa-Gb-fwo" secondAttribute="leading" id="yEx-pc-jnq"/>
                             <constraint firstItem="Agu-R5-s71" firstAttribute="top" secondItem="ZJw-jZ-0T2" secondAttribute="bottom" constant="-1" id="zDV-Zq-8J5"/>
                         </constraints>
@@ -144,11 +154,12 @@
                         <outlet property="edad" destination="Agu-R5-s71" id="5zv-M7-P5I"/>
                         <outlet property="fechaNacimiento" destination="ez6-Co-Sxr" id="AGK-Jo-qyC"/>
                         <outlet property="nombre" destination="JiM-XB-8bj" id="VlQ-rw-oGP"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="showLogin" id="PMW-eW-mLI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2QI-6R-Xco" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="765.60000000000002" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1236" y="-397"/>
         </scene>
     </scenes>
 </document>
