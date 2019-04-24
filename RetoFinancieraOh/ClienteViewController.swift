@@ -7,12 +7,15 @@
 //
 
 import UIKit
-//import DataBase
+import FirebaseDatabase
 
 
 class ClienteViewController: UIViewController {
 
  
+    let ref = Database.database().reference(withPath: "client-items")
+
+    
     //var ref: DatabaseReference!
     
     //ref = Database.database().reference()
@@ -23,6 +26,12 @@ class ClienteViewController: UIViewController {
     @IBOutlet weak var apellido: UITextField!
     @IBAction func save(_ sender: Any) {
         
+        
+        let clientItem = Client(nombres: nombre.text!, apellidos: apellido.text!, edad: edad.text!, fechaNacimiento: fechaNacimiento.text!)
+        
+        let clientItemRef = self.ref.childByAutoId()
+        
+        clientItemRef.setValue(clientItem.toAnyObject())
         
     }
     override func viewDidLoad() {
