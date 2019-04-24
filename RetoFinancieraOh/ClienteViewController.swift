@@ -7,15 +7,15 @@
 //
 
 import UIKit
-import DataBase
+//import DataBase
 
 
 class ClienteViewController: UIViewController {
 
  
-    var ref: DatabaseReference!
+    //var ref: DatabaseReference!
     
-    ref = Database.database().reference()
+    //ref = Database.database().reference()
     
     @IBOutlet weak var fechaNacimiento: UITextField!
     @IBOutlet weak var edad: UITextField!
