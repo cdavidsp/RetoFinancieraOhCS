@@ -76,6 +76,9 @@ class ClienteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "back1.jpg")!)
+        self.navigationController?.isNavigationBarHidden = true
+        
         showDatePicker()
         setupAddTargetIsNotEmptyTextFields();
         

@@ -18,15 +18,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="23V-My-DdX" customClass="GIDSignInButton">
-                                <rect key="frame" x="67.5" y="513.5" width="240" height="86"/>
+                                <rect key="frame" x="10" y="530" width="180" height="86"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="86" id="DiB-Iz-fqn"/>
-                                    <constraint firstAttribute="width" constant="240" id="wVb-GF-yX5"/>
+                                    <constraint firstAttribute="width" constant="180" id="wVb-GF-yX5"/>
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Ingrese el numero de celular" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ec-Dq-VAK">
-                                <rect key="frame" x="10" y="381" width="355" height="50"/>
+                                <rect key="frame" x="10" y="375.5" width="355" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="RcP-sU-BKX"/>
@@ -35,7 +35,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKe-BQ-h6S">
-                                <rect key="frame" x="159.5" y="446" width="56" height="40"/>
+                                <rect key="frame" x="159.5" y="440.5" width="56" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
@@ -43,13 +43,28 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Celular:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acz-lx-oeB">
-                                <rect key="frame" x="10" y="364" width="41" height="14"/>
+                                <rect key="frame" x="10" y="358.5" width="41" height="14"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="o sino con:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAc-B5-lNZ">
-                                <rect key="frame" x="148" y="494" width="79" height="19.5"/>
+                                <rect key="frame" x="148" y="495.5" width="79" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dfz-49-AMz">
+                                <rect key="frame" x="210" y="555.5" width="154" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Touch ID / Face ID"/>
+                                <connections>
+                                    <action selector="LoginBio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aU3-ts-sUG"/>
+                                    <action selector="validarNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZVy-lZ-GRo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dR6-pO-rz3">
+                                <rect key="frame" x="184" y="624.5" width="7.5" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -57,24 +72,30 @@
                         </subviews>
                         <color key="backgroundColor" red="0.91372549020000005" green="0.91764705879999997" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="23V-My-DdX" firstAttribute="top" secondItem="ZAc-B5-lNZ" secondAttribute="bottom" id="1gR-DZ-uHw"/>
-                            <constraint firstItem="23V-My-DdX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1p8-Hb-dS0"/>
+                            <constraint firstItem="23V-My-DdX" firstAttribute="top" secondItem="ZAc-B5-lNZ" secondAttribute="bottom" constant="15" id="1gR-DZ-uHw"/>
+                            <constraint firstItem="23V-My-DdX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="25r-kr-h4X"/>
                             <constraint firstItem="acz-lx-oeB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="3hi-aR-EQg"/>
-                            <constraint firstItem="ZAc-B5-lNZ" firstAttribute="top" secondItem="QKe-BQ-h6S" secondAttribute="bottom" constant="8" id="7ca-rO-HgX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dfz-49-AMz" secondAttribute="trailing" constant="11" id="6ce-kV-IzN"/>
+                            <constraint firstItem="ZAc-B5-lNZ" firstAttribute="top" secondItem="QKe-BQ-h6S" secondAttribute="bottom" constant="15" id="7ca-rO-HgX"/>
                             <constraint firstItem="QKe-BQ-h6S" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BoV-uL-Deh"/>
+                            <constraint firstItem="Dfz-49-AMz" firstAttribute="centerY" secondItem="23V-My-DdX" secondAttribute="centerY" id="EJp-P8-BxL"/>
                             <constraint firstItem="QKe-BQ-h6S" firstAttribute="top" secondItem="3ec-Dq-VAK" secondAttribute="bottom" constant="15" id="EsB-xp-Coy"/>
                             <constraint firstItem="3ec-Dq-VAK" firstAttribute="top" secondItem="acz-lx-oeB" secondAttribute="bottom" constant="3" id="SgA-Nj-NvA"/>
                             <constraint firstItem="3ec-Dq-VAK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ay9-9w-58B"/>
                             <constraint firstItem="3ec-Dq-VAK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="cMQ-iQ-fgf"/>
+                            <constraint firstItem="Dfz-49-AMz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="23V-My-DdX" secondAttribute="trailing" constant="8" symbolic="YES" id="cry-nW-uFz"/>
                             <constraint firstItem="ZAc-B5-lNZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dmI-Lp-8cn"/>
+                            <constraint firstItem="dR6-pO-rz3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gJs-je-cay"/>
+                            <constraint firstItem="dR6-pO-rz3" firstAttribute="top" secondItem="23V-My-DdX" secondAttribute="bottom" constant="8.5" id="gRx-kS-8vb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="acz-lx-oeB" secondAttribute="trailing" symbolic="YES" id="mSb-1E-qTP"/>
-                            <constraint firstItem="acz-lx-oeB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="nrv-6g-fL7"/>
+                            <constraint firstItem="acz-lx-oeB" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="qGH-F0-ojo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="uKc-uN-Rkw"/>
                     <connections>
                         <outlet property="phoneTextField" destination="3ec-Dq-VAK" id="Rf8-kr-gfb"/>
+                        <outlet property="stateLabel" destination="dR6-pO-rz3" id="Xf2-aV-ZX4"/>
                         <segue destination="WoC-yU-mmR" kind="show" identifier="toClientVC" id="8sa-da-nIh"/>
                     </connections>
                 </viewController>
