@@ -24,8 +24,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             let idToken = user.authentication.idToken // Safe to send to the server
             let fullName = user.profile.name
            
+    
             
-           
+            let uiNavigationController = self.window?.rootViewController! as! UINavigationController
+            
+            let mainViewController = uiNavigationController.children[0] as! ViewController
+            
+            mainViewController.redirec(withIdentifier: "toClientVC")
+            
+            
             
         }
     }

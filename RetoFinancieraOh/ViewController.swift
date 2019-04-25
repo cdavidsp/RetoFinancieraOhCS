@@ -9,9 +9,14 @@
 import UIKit
 
 import GoogleSignIn
+import Firebase
+import FirebaseAuth
 
 class ViewController: UIViewController, GIDSignInUIDelegate {
 
+    
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,13 +31,33 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         {
             print("Google Sign In Error")
         }
-        else
-        {
-            self.performSegue(withIdentifier: "toClientVC", sender: self)
-        }
+        
+        
+    }
+    func redirec(withIdentifier identifier:String)
+    {
+        self.performSegue(withIdentifier: identifier, sender: self)
         
     }
     
+    @IBOutlet weak var phoneTextField: UITextField!
+    
+    @IBAction func validarNumber(_ sender: Any) {
+    
+        
+        PhoneAuthProvider.provider().verifyPhoneNumber(phoneTextField.text!, uiDelegate: nil) { (verificationID, error) in
+            
+            if let error = error {
+                
+                print("error" )
+                
+                return
+                
+            }
+            
+            self.redirec(withIdentifier:"toClientVC")
+            }
+    }
     func sign(_ signIn: GIDSignIn!, present viewController: UIViewController!) {
         self.present(viewController, animated: true, completion: nil)
     }
