@@ -11,11 +11,20 @@ import Firebase
 import GoogleSignIn
 import FirebaseDatabase
 
-
 class ClienteViewController: UIViewController {
- 
+
     let ref = Database.database().reference(withPath: "client-items")
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "back1.jpg")!)
+        self.navigationController?.isNavigationBarHidden = true
+        
+        showDatePicker()
+        setupAddTargetIsNotEmptyTextFields();
+        
+    }
+    
     @IBOutlet weak var apellidoUITextField: UITextField!
     
     @IBOutlet weak var edadUITextField: UITextField!
@@ -70,28 +79,14 @@ class ClienteViewController: UIViewController {
             self.saveButton.isEnabled = false
             return
         }
-        // enable okButton if all conditions are met
         saveButton.isEnabled = true
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "back1.jpg")!)
-        self.navigationController?.isNavigationBarHidden = true
-        
-        showDatePicker()
-        setupAddTargetIsNotEmptyTextFields();
-        
     }
     
     @IBAction func log(_ sender: Any) {
         GIDSignIn.sharedInstance().signOut()
-        
         self.performSegueToReturnBack()
-
     }
     
-
     func performSegueToReturnBack()  {
         if let nav = self.navigationController {
             nav.popViewController(animated: true)
@@ -157,8 +152,6 @@ class ClienteViewController: UIViewController {
     @objc func cancelDatePicker(){
         self.view.endEditing(true)
     }
-    
-    
     
 }
 
