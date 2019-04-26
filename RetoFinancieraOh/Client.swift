@@ -23,7 +23,7 @@ class Client {
     }
     func toAnyObject() -> [String: Any] {
         
-        return ["nombres": self.nombres, "apellidos": self.apellidos , "edad": self.edad, "fechaNacimiento": self.fechaNacimiento]
+        return ["nombres": self.nombres ?? "", "apellidos": self.apellidos ?? "" , "edad": self.edad ?? "", "fechaNacimiento": self.fechaNacimiento ?? ""]
     }
     
     

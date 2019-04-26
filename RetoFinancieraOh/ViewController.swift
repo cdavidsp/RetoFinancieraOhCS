@@ -24,42 +24,40 @@ class ViewController: UIViewController, GIDSignInUIDelegate, UITextFieldDelegate
     @IBAction func LoginBio(_ sender: Any) {
         
         
+        
+        
         self.stateLabel.text = ""
         
-        // Get a fresh context for each login. If you use the same context on multiple attempts
-        //  (by commenting out the next line), then a previously successful authentication
-        //  causes the next policy evaluation to succeed without testing biometry again.
-        //  That's usually not what you want.
-        context = LAContext()
         
-        context.localizedCancelTitle = "Enter Username/Password"
+        print("hello there!.. You have clicked the touch ID")
         
-        // First check if we have the needed hardware support.
-        var error: NSError?
-        if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) {
-            
-            let reason = "Log in to your account"
-            context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason ) { success, error in
-                
-                if success {
+        let myContext = LAContext()
+        let myLocalizedReasonString = "Biometric Authntication testing !! "
+        
+        var authError: NSError?
+        if #available(iOS 8.0, macOS 10.12.1, *) {
+            if myContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &authError) {
+                myContext.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: myLocalizedReasonString) { success, evaluateError in
                     
-                    // Move to the main thread because a state update triggers UI changes.
-                    DispatchQueue.main.async { [unowned self] in
-                        self.redirec(withIdentifier: "toClientVC")
+                    DispatchQueue.main.async {
+                        if success {
+                            // User authenticated successfully, take appropriate action
+                            self.stateLabel.text = "Bienvenido"
+                            self.redirec(withIdentifier: "toClientVC")
+                        } else {
+                            // User did not authenticate successfully, look at error and take appropriate action
+                            self.stateLabel.text = "Disculpa, no se logró hacer la verificacion"
+                        }
                     }
-                    
-                } else {
-                    self.stateLabel.text = "Error en la autenticacion por biometria"
-                    
-                    // Fall back to a asking for username and password.
-                    // ...
                 }
+            } else {
+                // Could not evaluate policy; look at authError and present an appropriate message to user
+                stateLabel.text = "No se pudo evaluar Policy."
             }
         } else {
-            self.stateLabel.text = "Error en la autenticacion por biometria(Policy)"
+            // Fallback on earlier versions
             
-            // Fall back to a asking for username and password.
-            // ...
+            stateLabel.text = "No esta soportada la biometria."
         }
        
     }
